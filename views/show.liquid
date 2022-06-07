@@ -11,14 +11,18 @@
 <img src={{pokemon.img}} alt="pokemonImage" class="pimageBig">
 <h1>{{pokemon.name}}</h1>
 
-<h3>
-    Type: {{pokemon.type}} <br>
-    Stats: {{pokemon.stats}} <br>
+<p>
+    <b>Type: </b><br>
+    {{pokemon.type}} <br>
+    <b>Stats:  </| newline_to_br><br>
+    {%for stat in pokemon.stats%}
+   {{stat}} <br>
+    {%endfor%}
 
 
 
 
-</h3>
+</p>
 <a href="/pokedex">Back to Pokedex</a>
 
 
