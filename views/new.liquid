@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="./css/app.css">  
+    </head>
+    <body>
+        <h1>New Pokemon page</h1>
+            <!--  NOTE: action will be the route, method will be the HTTP verb-->
+            <form action="/pokedex" method="POST">
+                <label >
+                Name: <input type="text" name="name" placeholder="Enter name"/><br/>
+                </label>
+                <label >
+                stats: <input type="text" name="stats" placeholder="Enter stats"/><br/>
+                </label>
+                <label >
+                Damage: <input type="text" name="damage" placeholder="Enter damage"/><br/>
+                </label>
+                <label >
+                Abilities: <input type="text" name="abilities" placeholder="Enter abilities"/><br/>
+                </label>
+
+
+
+
+
+                <input type="submit" value="Create a pokedex"/>
+            </form>
+    </body>
+</html>

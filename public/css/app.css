@@ -1,19 +1,26 @@
 
-
+h1{
+    text-align: center;
+    margin: 100px auto;
+}
 container{
     margin: 50 auto;
 }
 
 
 li{
+    display: inline-block;
     list-style: none;
     width: 300px;
     height:300px;
-text-align: center;
+    text-align: center;
+   
 }
 
 
 .pimage{
+    
+    margin: auto;
     width: 150px;
     height: 150px;
     display:block

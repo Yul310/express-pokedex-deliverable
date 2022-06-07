@@ -12,26 +12,27 @@
 <h1>Pokedex</h1>
 
 <div class = 'container'>
+    <nav>
+        <a href="/pokedex/new"> Create a New Pokedex </a>
+    </nav> 
 <ul>
-    
-    {% for pokemon in allPokemons limit:10%}
+    <!-- limit:15% -->
+    {% for pokemon in allPokemons %}
 <li>
 
 <img src={{pokemon.img}} alt="pokemonImage" class="pimage">
 <a href="/pokedex/{{forloop.index0}}" class =" pName">{{pokemon.name}}</a>
+<form action="/pokedex/{{forloop.index0}}?_method=DELETE" method ="POST">
+    <input type="submit" value ="delete">
+</form>
 
-
-
-
-
-
-
+<a href="/pokedex/{{forloop.index0}}/edit">Edit</a>
 </li>
 
 
 {% endfor %}
 </ul>
-
+   
 </div>  
 </body>
 </html>

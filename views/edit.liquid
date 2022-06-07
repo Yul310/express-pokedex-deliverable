@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Fruit Page</title>
+    <link rel="stylesheet" href="./css/app/css">
+</head>
+<body>
+    <h1>Edit Pokedex</h1>
+
+    <form action="/pokedex/{{index}}?_method=PUT" method = "POST">
+    <!-- <img src={{pokemon.img}} alt="pokemonImage" class="pimage">   -->
+     Name:<input type = "text" name="name" value="{{pokemon.name}}"/>
+     Img:<input type = "text" name="img" value ="{{pokemon.img}}"/>
+     Type:<input type = "text" name="type" value="{%for type in pokemon.type%}{{type}} {%endfor%}"/>
+     Stats:<input type = "text" name="stats" value="{%for stat in pokemon.stats%}{{stat}} {%endfor%}"/>
+     Damages:<input type = "text" name="damages" value="{%for damage in pokemon.damages%}{{damage}} {%endfor%}"/>
+     ability:<input type = "text" name="ability" value="{%for ability in pokemon.misc.abilities%}{{ability}} {%endfor%}"/>
+     <!-- Img : <img src={{pokemon.img}} alt="pokemonImage" class="pimage">
+     <input type = "image" name="image" src= {{pokemon.img}}/> -->
+     <!-- Type:<input type = "text" name="name" value="{%for type in pokemon.type%}{{type}} {%endfor%}"/>
+     Stats:<input type = "text" name="name" value="{%for stat in pokemon.stats%}{{stat}} {%endfor%}"/>
+     Abilities:<input type = "text" name="name" value="{%for ability in pokemon.misc.abilities%}{{ability}} {%endfor%}"/> -->
+
+
+    <br/>
+    <input type="submit" name="" value="Submit Changes" />
+    </form>
+    
+</body>
+</html>
