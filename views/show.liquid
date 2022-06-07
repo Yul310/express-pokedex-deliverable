@@ -14,10 +14,20 @@
 <p>
     <b>Type: </b><br>
     {{pokemon.type}} <br>
-    <b>Stats:  </| newline_to_br><br>
+    <b>Stats:  </b><br>
     {%for stat in pokemon.stats%}
    {{stat}} <br>
     {%endfor%}
+    <b>Damage: </b><br>
+    {%for damage in pokemon.damages%}
+    {{damage}} <br>
+     {%endfor%}
+     <b>Abilities: </b><br>
+     {%for ability in pokemon.misc.abilities%}
+     {{ability}} <br>
+      {%endfor%}
+     
+
 
 
 
