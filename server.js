@@ -45,25 +45,23 @@ app.get('/pokedex',(req,res) =>{
 })
 
 
+// New page - render html
 
 app.get('/pokedex/new', (req, res) => {
     res.render('new')
 })
 
-
+// New page - put new req.body to pokemons
 app.post('/pokedex', (req, res) => {
-    // if (req.body.own === 'on') { 
-    //     req.body.own = true; //do some data correction
-    // } else {
-    //     req.body.own = false; //do some data correction
-    // }
+  
     pokemons.unshift(req.body);
     console.log(req.body);
-    res.redirect('/pokedex'); //send the user back to /fruits
+    res.redirect('/pokedex'); 
 });
 
 
-//Show Page(Individual pokemon page)
+
+//Show Page(Individual pokemon page render)
 app.get('/pokedex/:index',(req,res) =>{
     // res.send("hello")
     res.render(
@@ -103,18 +101,19 @@ app.get("/pokedex/:index/edit", (req, res) => {
 app.put("/pokedex/:index", (req, res) => {
   console.log(req.body)
 
-  pokemons[req.params.index].name = req.body.name; 
-  pokemons[req.params.index].img = req.body.img; 
-  pokemons[req.params.index].type = req.body.type; 
-  pokemons[req.params.index].stats = req.body.stats; 
-  pokemons[req.params.index].damage = req.body.damages;
-  pokemons[req.params.index].abilities= req.body.abilities;
-// pokemons[req.params.index]= { 
-//     name:(req.body.name),
-//     img:(req.body.img),
-//     type:(req.body.type),
-//     stats:(req.body.stats),
-//     misc:req.body.misc.abilities
-// }
+//   pokemons[req.params.index].name = req.body.name; 
+//   pokemons[req.params.index].img = req.body.img; 
+//   pokemons[req.params.index].type = req.body.type; 
+//   pokemons[req.params.index].stats = req.body.stats; 
+//   pokemons[req.params.index].damage = req.body.damages;
+//   pokemons[req.params.index].abilities= req.body.abilities;
+pokemons[req.params.index]= { 
+    name:req.body.name,
+    img:req.body.img,
+    type:req.body.type,
+    stats:req.body.stats,
+    damages:req.body.damages,
+    ability:req.body.abilities
+}
   res.redirect("/pokedex"); 
 });
