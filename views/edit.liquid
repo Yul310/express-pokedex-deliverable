@@ -15,7 +15,7 @@
     <h1>Edit Pokedex</h1>
 
     <form action="/pokedex/{{index}}?_method=PUT" method = "POST">
-    <!-- <img src={{pokemon.img}} alt="pokemonImage" class="pimage">   -->
+    <!-- it took a little while to realize that name has to be written correctly -->
      Name:<input type = "text" name="name" value="{{pokemon.name}}"/> <br>
      Img:<input type = "text" name="img" value ="{{pokemon.img}}"/> <br>
      Type:<input type = "text" name="type" value="{%for type in pokemon.type%}{{type}} {%endfor%}"/> <br>

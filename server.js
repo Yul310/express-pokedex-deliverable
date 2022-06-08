@@ -81,23 +81,20 @@ res.redirect('/pokedex')
 
 
 
-
+//Edit page render
 app.get("/pokedex/:index/edit", (req, res) => {
     res.render(
       "edit",
-      {
-        
-        pokemon: pokemons[req.params.index], //the fruit object
-        index: req.params.index //... and its index in the array
+      { 
+        pokemon: pokemons[req.params.index], 
+        index: req.params.index 
       }
     );
   });
 
 
 
-
-
-
+//Edit page - move editted information to pokemons[id] 
 app.put("/pokedex/:index", (req, res) => {
   console.log(req.body)
 
