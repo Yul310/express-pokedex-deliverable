@@ -16,8 +16,25 @@ li{
     text-align: center;
    
 }
+form{
+    
+    margin: auto;    
+}
+
+image{
 
 
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    display:block
+
+
+}
+label{
+    margin: 20px 20px auto;
+    display:inline-block;
+}
 .pimage{
     
     margin: auto;

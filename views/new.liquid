@@ -3,30 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="./css/app.css">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/css/app.css">  
     </head>
     <body>
         <h1>New Pokemon page</h1>
             <!--  NOTE: action will be the route, method will be the HTTP verb-->
             <form action="/pokedex" method="POST">
                 <label >
-                Name: <input type="text" name="name" placeholder="Enter name"/><br/>
-                </label>
+                Name: <input type="text" name="name" placeholder="Enter name"/>
+                </label><br/>
                 <label >
                 stats: <input type="text" name="stats" placeholder="Enter stats"/><br/>
-                </label>
+                </label><br/>
                 <label >
                 Damage: <input type="text" name="damage" placeholder="Enter damage"/><br/>
-                </label>
+                </label><br/>
                 <label >
                 Abilities: <input type="text" name="abilities" placeholder="Enter abilities"/><br/>
-                </label>
+                </label><br/>
 
 
 
 
 
                 <input type="submit" value="Create a pokedex"/>
+                
             </form>
+            <a href="/pokedex">Back to Pokedex</a>
     </body>
 </html>
